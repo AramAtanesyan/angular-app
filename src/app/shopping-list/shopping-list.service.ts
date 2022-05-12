@@ -11,7 +11,7 @@ export class ShoppingListService {
   ];
 
   getIngredients() {
-    return this.ingredients;
+    return this.ingredients.slice();
   }
 
   addIngredient(newIngredient: Ingredient) {
@@ -19,5 +19,10 @@ export class ShoppingListService {
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 
+  addIngredients(newIngredients: Ingredient[]) {
+    this.ingredients.push(...newIngredients);
+
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
 
 }
