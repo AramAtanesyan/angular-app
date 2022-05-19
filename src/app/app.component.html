@@ -1,12 +1,13 @@
-<app-header (linkSelected)="onNavigate($event)"></app-header>
+<app-header></app-header>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="activeLink === 'recipe'; else shopping_list_case" ></app-recipes>
-      <ng-template #shopping_list_case>
-        <app-shopping-list></app-shopping-list>
-      </ng-template>
+      <router-outlet></router-outlet>
+<!--      <app-recipes *ngIf="activeLink === 'recipe'; else shopping_list_case" ></app-recipes>-->
+<!--      <ng-template #shopping_list_case>-->
+<!--        <app-shopping-list></app-shopping-list>-->
+<!--      </ng-template>-->
     </div>
   </div>
 </div>
