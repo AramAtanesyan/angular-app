@@ -16,6 +16,7 @@ export class RecipesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //todo: should be deleted too
     this.recipeService.recipeSelected.subscribe(
       (recipe: Recipe) => {
         this.selectedRecipe = recipe;
