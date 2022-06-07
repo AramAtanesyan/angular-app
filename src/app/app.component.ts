@@ -7,12 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  activeLink: string = 'recipe';
   ngOnInit(): void {
-  }
-
-  onNavigate(link: string) {
-    this.activeLink = link;
-    
   }
 }

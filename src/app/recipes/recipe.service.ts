@@ -10,9 +10,6 @@ export class RecipeService {
   constructor(private shoppingListService: ShoppingListService) {
   }
 
-
-  recipeSelected = new EventEmitter<Recipe>();
-
   private recipes: Recipe[] = [
     new Recipe('Borshch',
       'soup with meat',
